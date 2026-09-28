@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 800" role="img" aria-labelledby="t d">
+  <title id="t">Phúc mãn đường</title><desc id="d">Chữ Phúc màu son với hoa mai trên giấy xuyến.</desc>
+  <defs><linearGradient id="g" y2="1"><stop stop-color="#f0e2c5"/><stop offset="1" stop-color="#d2b985"/></linearGradient></defs><rect width="600" height="800" fill="url(#g)"/><path d="M44 54h512v692H44zM61 71h478v658H61z" fill="none" stroke="#9a3329" opacity=".6"/>
+  <text x="300" y="450" text-anchor="middle" fill="#9c3329" font-family="serif" font-size="235" font-weight="600" transform="rotate(-2 300 450)">PHÚC</text><text x="300" y="560" text-anchor="middle" fill="#443526" font-family="serif" font-size="18" letter-spacing="6">PHÚC MÃN ĐƯỜNG</text>
+  <g fill="#b28b33"><circle cx="123" cy="174" r="8"/><circle cx="152" cy="145" r="6"/><circle cx="474" cy="628" r="8"/><circle cx="501" cy="601" r="5"/></g><path d="M77 226c34-27 58-60 76-98M433 672c31-20 56-49 77-88" fill="none" stroke="#5c4d32" stroke-width="3"/>
+</svg>

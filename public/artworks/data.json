@@ -1,0 +1,69 @@
+[
+    {
+        "title": "Chu Thuong",
+        "image": "./artwork.svg",
+        "description": "Thuong là chữ đẹp, là sự kết hợp giữa nghệ thuật và tâm hồn. Tác phẩm này thể hiện sự tinh tế trong từng nét chữ, mang đến cảm giác thanh thoát và nhẹ nhàng. Mỗi đường nét đều được chăm chút kỹ lưỡng, tạo nên một tổng thể hài hòa và đầy cảm xúc.",
+        "materials": {
+            "chat_lieu": "Lụa",
+            "kich_thuoc": "40cm x 60cm"
+        },
+        "social_links": {
+            "facebook": "https://www.facebook.com/thuong.artwork",
+            "youtube": "",
+            "tiktock": "https://www.tiktok.com/@thuong.artwork"
+        }
+    },
+    {
+        "title": "Phúc mãn đường",
+        "image": "./phuc-man-duong.svg",
+        "description": "Sắc son được chọn thay cho mực đen để giữ trọn tinh thần lễ hội và niềm vui sum họp. Chữ Phúc chiếm gần trọn mặt giấy nhưng vẫn được bao quanh bởi đường viền mảnh, gợi liên tưởng đến tranh dân gian và những tờ hoa tiên ngày Tết. Hai nhành mai nhỏ giúp bố cục bớt nghiêm, đem đến một lời chúc vừa truyền thống vừa phù hợp với không gian sống hôm nay.",
+        "materials": {
+            "chat_lieu": "Lụa",
+            "kich_thuoc": "40cm x 60cm"
+        },
+        "social_links": {
+            "facebook": "https://www.facebook.com/thuong.artwork",
+            "youtube": "",
+            "tiktock": "https://www.tiktok.com/@thuong.artwork"
+        }
+    },
+    {
+        "title": "Bình an",
+        "image": "./binh-an.svg",
+        "description": "Hai chữ Bình An được viết trong một bố cục rộng, lấy khoảng trống làm phần quan trọng ngang với nét mực. Nhành trúc nghiêng về phía chữ như một lời thăm hỏi nhẹ nhàng, gợi sân nhà, hiên gỗ và nếp sống thanh đạm của người Việt. Dấu triện son là điểm kết, mang sắc ấm của một lời chúc được trao tận tay trong ngày đoàn viên.",
+        "materials": {
+            "chat_lieu": "Mực tàu trên giấy dó",
+            "kich_thuoc": "50cm x 70cm"
+        },
+        "social_links": {
+            "facebook": "https://www.facebook.com/binh-an.artwork",
+            "youtube": ""
+        }
+    },
+    {
+        "title": "Chữ Nhẫn",
+        "image": "./chu-nhan.svg",
+        "description": "Chữ Nhẫn thường được hiểu là sự chịu đựng, nhưng trong tác phẩm này đó còn là khả năng giữ lòng sáng giữa những chuyển động không ngừng. Vòng mực phía sau không khép kín, để lại một lối thở và một cơ hội đổi thay. Chất lụa làm nét bút lan mềm hơn giấy, khiến phần mạnh và phần dịu cùng tồn tại trong một thế chữ đầy nội lực.",
+        "materials": {
+            "chat_lieu": "Mực nho trên lụa",
+            "kich_thuoc": "45cm x 68cm"
+        },
+        "social_links": {
+            "youtube": "",
+            "tiktock": "https://www.tiktok.com/@chu-nhan.artwork"
+        }
+    },
+    {
+        "title": "Tri âm",
+        "image": "./tri-am.svg",
+        "description": "Tri Âm kể về cuộc gặp giữa những người có thể nghe được điều chưa thành lời của nhau. Màu lam chàm bao quanh vòng giấy ngà, nhắc đến áo nhuộm thủ công, gốm cổ và những lớp sóng trên đồ án trang trí Việt. Các nét giao nhau nhưng không lấn át, tạo thành một cuộc đối thoại cân bằng giữa chữ, hình, ký ức và sự gặp gỡ.",
+        "materials": {
+            "chat_lieu": "Mực tàu và màu khoáng",
+            "kich_thuoc": "60cm x 80cm"
+        },
+        "social_links": {
+            "facebook": "https://www.facebook.com/tri-am.artwork",
+            "youtube": ""
+        }
+    }
+]
