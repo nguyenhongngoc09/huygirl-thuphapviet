@@ -23,10 +23,10 @@ export const metadata: Metadata = {
   description: "Không gian thưởng lãm thư pháp Việt, câu chuyện và chất liệu phía sau từng tác phẩm.",
 };
 
-export default function RootLayout({ children }: Readonly<{ children: React.ReactNode }>) {
+export default function RootLayout({ children, modal }: Readonly<{ children: React.ReactNode; modal: React.ReactNode }>) {
   return (
     <html lang="vi" className={`${bodyFont.variable} ${displayFont.variable}`}>
-      <body>{children}</body>
+      <body>{children}{modal}</body>
     </html>
   );
 }

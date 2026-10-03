@@ -12,6 +12,8 @@ export type ArtworkSocialLink = {
 export type ArtworkRecord = {
   slug: string;
   title: string;
+  group: string;
+  groupSlug: string;
   description: string;
   materials: string[];
   socialLinks: ArtworkSocialLink[];
@@ -74,6 +76,8 @@ function parseArtwork(value: DataArtwork, index: number): ArtworkRecord {
   return {
     slug: slugify(value.title, index),
     title: value.title,
+    group: value.title.split(/\s+[–—-]\s+/)[0].trim(),
+    groupSlug: slugify(value.title.split(/\s+[–—-]\s+/)[0].trim(), index),
     description: value.description,
     materials,
     socialLinks,

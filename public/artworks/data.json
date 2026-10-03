@@ -1,69 +1,198 @@
 [
     {
-        "title": "Chu Thuong",
-        "image": "./artwork.svg",
-        "description": "Thuong là chữ đẹp, là sự kết hợp giữa nghệ thuật và tâm hồn. Tác phẩm này thể hiện sự tinh tế trong từng nét chữ, mang đến cảm giác thanh thoát và nhẹ nhàng. Mỗi đường nét đều được chăm chút kỹ lưỡng, tạo nên một tổng thể hài hòa và đầy cảm xúc.",
+        "title": "Thương – Hoa trắng bên sông",
+        "image": "./thuong_01.PNG",
+        "description": "Một chữ Thương mở ra bằng nét bút phóng khoáng, rồi ngân dài trong đường cong ôm lấy hình trái tim nhỏ. Bên dưới, cành hoa trắng và đôi chim xanh hiện lên giữa núi xa, sông vắng, gợi vẻ dịu dàng của những ngày được ở cạnh người mình quý mến. Sắc vàng bao quanh nền tranh sáng làm ấm cả bố cục. Tác phẩm gửi gắm lời nhắn về sự thấu hiểu, nhường nhịn và bao dung — những điều bình dị nuôi dưỡng một mái ấm mỗi ngày.",
         "materials": {
-            "chat_lieu": "Lụa",
-            "kich_thuoc": "40cm x 60cm"
+            "chat_lieu": "Đang cập nhật",
+            "kich_thuoc": "Đang cập nhật"
         },
         "social_links": {
-            "facebook": "https://www.facebook.com/thuong.artwork",
+            "facebook": "",
+            "youtube": "https://www.youtube.com/shorts/kWiyEdPLzXA",
+            "tiktok": ""
+        }
+    },
+    {
+        "title": "Thương – Đôi chim mùa xuân, viền đỏ",
+        "image": "./thuong_02.PNG",
+        "description": "Sắc đỏ của viền tranh ôm lấy chữ Thương mềm mại trên nền sáng, như giữ lại hơi ấm của một lời yêu chưa nói. Đôi chim đậu bên cành hoa hồng, phía xa là núi và con thuyền nhỏ, tạo nên khung cảnh gần gũi mà yên ả. Nét chữ kéo dài thành hình trái tim nối phần thư pháp với lời nhắn về lòng bao dung. Treo trong không gian sum họp, bức tranh gợi nhớ niềm vui được lắng nghe và được trở về bên nhau.",
+        "materials": {
+            "chat_lieu": "Đang cập nhật",
+            "kich_thuoc": "Đang cập nhật"
+        },
+        "social_links": {
+            "facebook": "",
+            "youtube": "https://www.youtube.com/shorts/mfjtyc2clC8",
+            "tiktok": ""
+        }
+    },
+    {
+        "title": "Thương – Tùng hạc bên vầng sáng",
+        "image": "./thuong_03.PNG",
+        "description": "Chữ Thương trải rộng trên nền ngà, kết lại bằng một nét cong thanh thoát và hình trái tim nhỏ đầy trìu mến. Cội tùng, chim hạc và vầng sáng tròn phía dưới đem đến chiều sâu tĩnh tại, hòa cùng viền vàng có hoa văn trang nhã. Sự kết hợp ấy gợi một tình thương bền bỉ qua năm tháng: biết chở che, biết nhường nhịn và luôn dành cho nhau một khoảng lòng rộng rãi. Đây là lời gửi gắm dịu dàng dành cho người thân và những mối duyên đáng quý.",
+        "materials": {
+            "chat_lieu": "Đang cập nhật",
+            "kich_thuoc": "Đang cập nhật"
+        },
+        "social_links": {
+            "facebook": "",
             "youtube": "",
-            "tiktock": "https://www.tiktok.com/@thuong.artwork"
+            "tiktok": ""
         }
     },
     {
-        "title": "Phúc mãn đường",
-        "image": "./phuc-man-duong.svg",
-        "description": "Sắc son được chọn thay cho mực đen để giữ trọn tinh thần lễ hội và niềm vui sum họp. Chữ Phúc chiếm gần trọn mặt giấy nhưng vẫn được bao quanh bởi đường viền mảnh, gợi liên tưởng đến tranh dân gian và những tờ hoa tiên ngày Tết. Hai nhành mai nhỏ giúp bố cục bớt nghiêm, đem đến một lời chúc vừa truyền thống vừa phù hợp với không gian sống hôm nay.",
+        "title": "Thương – Đôi chim mùa xuân, viền vàng",
+        "image": "./thuong_04.PNG",
+        "description": "Trong dáng tranh cuộn thanh dài, chữ Thương nổi bật bằng những nét đậm đầy đặn xen đường lướt nhẹ như một nhịp thở. Đôi chim trên cành hoa hồng cùng cảnh sông núi phía dưới kể tiếp câu chuyện về sự gắn bó, còn viền vàng mang đến vẻ sáng ấm cho tổng thể. Hình trái tim nhỏ ẩn trong nét chữ khiến lời nhắn về thấu hiểu và bao dung trở nên gần gũi. Bức tranh như một lời hẹn giữ gìn những điều êm ấm giữa nhịp sống thường ngày.",
         "materials": {
-            "chat_lieu": "Lụa",
-            "kich_thuoc": "40cm x 60cm"
+            "chat_lieu": "Đang cập nhật",
+            "kich_thuoc": "Đang cập nhật"
         },
         "social_links": {
-            "facebook": "https://www.facebook.com/thuong.artwork",
+            "facebook": "",
             "youtube": "",
-            "tiktock": "https://www.tiktok.com/@thuong.artwork"
+            "tiktok": ""
         }
     },
     {
-        "title": "Bình an",
-        "image": "./binh-an.svg",
-        "description": "Hai chữ Bình An được viết trong một bố cục rộng, lấy khoảng trống làm phần quan trọng ngang với nét mực. Nhành trúc nghiêng về phía chữ như một lời thăm hỏi nhẹ nhàng, gợi sân nhà, hiên gỗ và nếp sống thanh đạm của người Việt. Dấu triện son là điểm kết, mang sắc ấm của một lời chúc được trao tận tay trong ngày đoàn viên.",
+        "title": "Yêu thương – Viền đỏ hoa văn",
+        "image": "./yeuthuong_01.PNG",
+        "description": "Hai chữ Yêu Thương nối nhau theo chiều dọc, để nét bút đen dẫn ánh nhìn qua những khoảng nền vàng nhạt đầy thoáng đãng. Đường cong cuối chữ nâng niu một trái tim nhỏ, trong khi viền đỏ phủ hoa văn uốn lượn tạo vẻ ấm áp và trang trọng. Những dòng chữ nhỏ ở chân tranh gợi tinh thần sẻ chia, nhắc rằng tình cảm lớn lên từ cách ta đối đãi với nhau mỗi ngày. Một điểm nhấn giàu ý nghĩa cho góc nhà sum họp, cũng là món quà thay lời trân quý.",
         "materials": {
-            "chat_lieu": "Mực tàu trên giấy dó",
-            "kich_thuoc": "50cm x 70cm"
+            "chat_lieu": "Đang cập nhật",
+            "kich_thuoc": "Đang cập nhật"
         },
         "social_links": {
-            "facebook": "https://www.facebook.com/binh-an.artwork",
-            "youtube": ""
-        }
-    },
-    {
-        "title": "Chữ Nhẫn",
-        "image": "./chu-nhan.svg",
-        "description": "Chữ Nhẫn thường được hiểu là sự chịu đựng, nhưng trong tác phẩm này đó còn là khả năng giữ lòng sáng giữa những chuyển động không ngừng. Vòng mực phía sau không khép kín, để lại một lối thở và một cơ hội đổi thay. Chất lụa làm nét bút lan mềm hơn giấy, khiến phần mạnh và phần dịu cùng tồn tại trong một thế chữ đầy nội lực.",
-        "materials": {
-            "chat_lieu": "Mực nho trên lụa",
-            "kich_thuoc": "45cm x 68cm"
-        },
-        "social_links": {
+            "facebook": "",
             "youtube": "",
-            "tiktock": "https://www.tiktok.com/@chu-nhan.artwork"
+            "tiktok": ""
         }
     },
     {
-        "title": "Tri âm",
-        "image": "./tri-am.svg",
-        "description": "Tri Âm kể về cuộc gặp giữa những người có thể nghe được điều chưa thành lời của nhau. Màu lam chàm bao quanh vòng giấy ngà, nhắc đến áo nhuộm thủ công, gốm cổ và những lớp sóng trên đồ án trang trí Việt. Các nét giao nhau nhưng không lấn át, tạo thành một cuộc đối thoại cân bằng giữa chữ, hình, ký ức và sự gặp gỡ.",
+        "title": "An – Sen hồng",
+        "image": "./an_01.PNG",
+        "description": "Chữ An hiện lên cô đọng bằng nét đen mạnh mà mềm, phía dưới là những dòng thư pháp nhỏ và đóa sen hồng giữa tán lá xanh. Khoảng nền sáng giúp bố cục có độ thoáng, còn hai đầu cuộn màu vàng hoa văn đem lại sắc ấm trang nhã. Từ dáng sen vươn lên đến nhịp chữ khoan thai, bức tranh gợi một chốn bình yên bắt đầu trong lòng mỗi người. Đặt nơi phòng khách hay góc trà, tác phẩm như lời nhắc nhẹ để chậm lại và gìn giữ sự hòa thuận trong nhà.",
         "materials": {
-            "chat_lieu": "Mực tàu và màu khoáng",
-            "kich_thuoc": "60cm x 80cm"
+            "chat_lieu": "Đang cập nhật",
+            "kich_thuoc": "Đang cập nhật"
         },
         "social_links": {
-            "facebook": "https://www.facebook.com/tri-am.artwork",
-            "youtube": ""
+            "facebook": "",
+            "youtube": "",
+            "tiktok": ""
+        }
+    },
+    {
+        "title": "Buông – Viền vàng",
+        "image": "./buong_01.PNG",
+        "description": "Chữ Buông được đặt gọn trong ô nền vàng ấm, bao quanh bởi khoảng viền sáng và hai đầu cuộn vàng. Nét mở đầu vươn cao, những đường cong đan nối rồi thả xuống tự nhiên, tạo cảm giác nhẹ nhõm giữa một bố cục cân đối. Những dòng chữ nhỏ bên dưới giữ lại dư âm suy ngẫm: có những điều khi đặt xuống, lòng mới có chỗ cho bình yên. Tác phẩm phù hợp với góc đọc sách, bàn trà hoặc khoảng tường nơi ta thường dừng lại sau một ngày dài.",
+        "materials": {
+            "chat_lieu": "Đang cập nhật",
+            "kich_thuoc": "Đang cập nhật"
+        },
+        "social_links": {
+            "facebook": "",
+            "youtube": "",
+            "tiktok": ""
+        }
+    },
+    {
+        "title": "Buông – Tùy duyên, viền đỏ",
+        "image": "./buong_02.PNG",
+        "description": "Trên nền vàng, chữ Buông trải nét rộng và kết bằng một đường buông dài, bên dưới là hai chữ tùy duyên nhỏ nhắn. Viền sáng tạo khoảng nghỉ cho mắt, còn sắc đỏ ở hai đầu cuộn làm bức tranh thêm nổi bật và ấm áp. Bố cục gợi thái độ đón nhận những đổi thay với một tâm thế thong dong, biết nâng niu điều đang có và nhẹ lòng với điều đã qua. Một lời nhắc sâu lắng để mỗi lần ngắm tranh, ta có thể thở chậm hơn một nhịp.",
+        "materials": {
+            "chat_lieu": "Đang cập nhật",
+            "kich_thuoc": "Đang cập nhật"
+        },
+        "social_links": {
+            "facebook": "",
+            "youtube": "",
+            "tiktok": ""
+        }
+    },
+    {
+        "title": "Buông – Lá bồ đề, viền xám",
+        "image": "./buong_03.PNG",
+        "description": "Chữ Buông nổi bật trên ô nền vàng với nét cong lớn ôm lấy phần chân chữ, phía sau thấp thoáng hình lá bồ đề. Viền xám hoa văn cùng khoảng nền trắng tạo nên tổng thể trầm tĩnh, làm rõ vẻ phóng khoáng của nét thư pháp. Không nhiều lời đề, tác phẩm dành khoảng lặng cho người xem tự tìm thấy điều mình muốn đặt xuống. Vẻ điềm đạm ấy thích hợp với không gian nghỉ ngơi, góc thiền hoặc một nơi yên tĩnh trong nhà.",
+        "materials": {
+            "chat_lieu": "Đang cập nhật",
+            "kich_thuoc": "Đang cập nhật"
+        },
+        "social_links": {
+            "facebook": "",
+            "youtube": "https://www.youtube.com/shorts/wWOzVxMbI44",
+            "tiktok": ""
+        }
+    },
+    {
+        "title": "Đức – Hoa mẫu đơn",
+        "image": "./duc_01.PNG",
+        "description": "Chữ Đức được thể hiện bằng những nét đen dày, khỏe, xen những vệt bút thoáng tạo cảm giác vững vàng mà vẫn mềm mại. Cụm hoa mẫu đơn đỏ, trắng và hồng ở chân tranh làm dịu bố cục, hòa cùng hai đầu cuộn vàng có hoa văn. Tác phẩm gợi lời nhắc về nếp sống tử tế, lấy lòng nhân hậu làm nền cho những điều tốt đẹp lâu dài. Treo trong không gian gia đình, chữ Đức trở thành một lời dặn hiền hòa được gìn giữ qua từng thế hệ.",
+        "materials": {
+            "chat_lieu": "Đang cập nhật",
+            "kich_thuoc": "Đang cập nhật"
+        },
+        "social_links": {
+            "facebook": "",
+            "youtube": "",
+            "tiktok": ""
+        }
+    },
+    {
+        "title": "Hiếu – Chim bên cành hoa",
+        "image": "./hieu_01.PNG",
+        "description": "Chữ Hiếu thanh thoát đứng ở phần trên của bức tranh cuộn viền đỏ, bên dưới là lời đề và đôi chim nép bên cành hoa giữa cảnh sông núi. Những khoảng nền sáng giữ cho tổng thể nhẹ nhàng, để ý nghĩa tri ân hiện lên vừa trang trọng vừa gần gũi. Bức tranh gợi nhớ mái nhà, công dưỡng dục và những chăm chút lặng thầm của cha mẹ. Một món quà mang lời biết ơn chân thành, nhắc người nhận và người trao cùng trân trọng những ngày còn được quây quần.",
+        "materials": {
+            "chat_lieu": "Đang cập nhật",
+            "kich_thuoc": "Đang cập nhật"
+        },
+        "social_links": {
+            "facebook": "",
+            "youtube": "",
+            "tiktok": ""
+        }
+    },
+    {
+        "title": "Nhẫn – Hoa mẫu đơn, viền đỏ",
+        "image": "./nhan_01.PNG",
+        "description": "Những nét cong đầy nội lực của chữ Nhẫn nổi bật trên nền ngà, cân bằng với các dòng chữ nhỏ và cụm hoa mẫu đơn nhiều sắc ở phía dưới. Hai đầu cuộn đỏ hoa văn đem lại vẻ trang trọng, trong khi đường bút chuyển từ đậm sang thoáng gợi sự điềm tĩnh và mềm dẻo. Tác phẩm gửi gắm tinh thần biết dừng một nhịp trước hơn thua, giữ lòng rộng rãi khi đối diện điều khó. Một chữ để ngắm, cũng là một lời tự nhắc trong ứng xử hằng ngày.",
+        "materials": {
+            "chat_lieu": "Đang cập nhật",
+            "kich_thuoc": "Đang cập nhật"
+        },
+        "social_links": {
+            "facebook": "",
+            "youtube": "",
+            "tiktok": ""
+        }
+    },
+    {
+        "title": "Thuận – Viền đỏ",
+        "image": "./thuan_01.JPEG",
+        "description": "Chữ Thuận cuộn nét trên nền cam ấm, được bao quanh bởi viền đỏ với những lớp hoa văn nổi bật. Các cột chữ nhỏ phía dưới tạo nhịp cân xứng, khiến tổng thể vừa có sức chuyển động vừa giữ được vẻ trang nghiêm. Ý nghĩa thuận hòa gợi mong ước người trong nhà biết lắng nghe, cùng chung lòng để việc lớn nhỏ đều thêm êm đẹp. Bức tranh mang sắc ấm sum vầy, thích hợp làm lời chúc cho một mái ấm mới hoặc một khởi đầu nhiều hy vọng.",
+        "materials": {
+            "chat_lieu": "Đang cập nhật",
+            "kich_thuoc": "Đang cập nhật"
+        },
+        "social_links": {
+            "facebook": "",
+            "youtube": "",
+            "tiktok": ""
+        }
+    },
+    {
+        "title": "Thuận – Viền xanh vàng",
+        "image": "./thuan_02.JPG",
+        "description": "Nét chữ Thuận tròn đầy nổi bật giữa ô nền vàng, được nâng đỡ bởi khoảng viền trắng thoáng và hai mảng hoa văn xanh vàng ở đầu cuộn. Sự chuyển sắc từ ấm sang trầm tạo vẻ nhã nhặn, để ánh nhìn dừng lại ở đường bút mềm mà dứt khoát. Tác phẩm gợi ước mong mọi người đồng lòng, mỗi việc đều được vun đắp bằng sự cảm thông và bền chí. Trong không gian sống, chữ Thuận mang theo một lời chúc hòa hợp giản dị mà lâu bền.",
+        "materials": {
+            "chat_lieu": "Đang cập nhật",
+            "kich_thuoc": "Đang cập nhật"
+        },
+        "social_links": {
+            "facebook": "",
+            "youtube": "https://www.youtube.com/shorts/Dn1FEGFIRVE",
+            "tiktok": ""
         }
     }
 ]

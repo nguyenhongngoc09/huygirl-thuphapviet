@@ -1,7 +1,0 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 800" role="img" aria-labelledby="t d">
-  <title id="t">Chữ Thương</title><desc id="d">Tác phẩm chữ Thương bằng mực nho trên nền lụa màu ngà.</desc>
-  <defs><filter id="r"><feTurbulence baseFrequency=".025" numOctaves="2" result="n"/><feDisplacementMap in="SourceGraphic" in2="n" scale="5"/></filter><linearGradient id="g" y2="1"><stop stop-color="#eee3cb"/><stop offset="1" stop-color="#d6c29c"/></linearGradient></defs>
-  <rect width="600" height="800" fill="url(#g)"/><path d="M55 65h490v670H55z" fill="none" stroke="#8c3027" stroke-width="2" opacity=".55"/>
-  <g fill="#211c17" filter="url(#r)"><path d="M286 125c-8 116-2 234 17 353l33-9c-13-121-13-235 1-343z"/><path d="M153 253c101-19 197-18 290 4l-7 32c-100-15-192-12-276 9z"/><path d="M182 397c83-14 166-11 248 10l-10 31c-79-14-156-13-231 5z"/><path d="M135 528c108 28 216 25 325-9l12 35c-116 48-230 54-344 17z"/></g>
-  <text x="300" y="655" text-anchor="middle" fill="#30271f" font-family="serif" font-size="46" font-style="italic">THƯƠNG</text><rect x="448" y="644" width="58" height="58" fill="#962f25" transform="rotate(3 477 673)"/><text x="477" y="679" text-anchor="middle" fill="#f0dfbf" font-family="serif" font-size="14">愛</text>
-</svg>

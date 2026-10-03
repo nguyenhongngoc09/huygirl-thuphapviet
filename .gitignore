@@ -15,6 +15,9 @@
 # production
 /build
 
+# Local master artwork images; only watermarked copies belong in public/Git.
+/artworks-source/
+
 # misc
 .DS_Store
 *.pem

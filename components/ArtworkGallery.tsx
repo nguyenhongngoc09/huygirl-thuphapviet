@@ -1,9 +1,14 @@
 "use client";
 
 import type { ArtworkRecord } from "@/lib/artworks";
+import ArtworkContact from "@/components/ArtworkContact";
+import ArtworkPopupContact from "@/components/ArtworkPopupContact";
+import ArtworkSeal from "@/components/ArtworkSeal";
 import GalleryAtmosphere from "@/components/GalleryAtmosphere";
+import MessengerIcon from "@/components/MessengerIcon";
 import { siteLinks } from "@/lib/site-links";
 import Image from "next/image";
+import Link from "next/link";
 import { useCallback, useEffect, useRef, useState } from "react";
 
 function Arrow({ direction = "right" }: { direction?: "left" | "right" }) {
@@ -12,10 +17,6 @@ function Arrow({ direction = "right" }: { direction?: "left" | "right" }) {
 
 function ExpandIcon() {
   return <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8 3H3v5M16 3h5v5M8 21H3v-5M16 21h5v-5M3 8l6-6M21 8l-6-6M3 16l6 6M21 16l-6 6" /></svg>;
-}
-
-function MessengerIcon() {
-  return <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2C6.48 2 2 6.15 2 11.27c0 2.92 1.46 5.52 3.74 7.22V22l3.42-1.88c.9.25 1.86.39 2.84.39 5.52 0 10-4.15 10-9.24S17.52 2 12 2Zm1 12.48-2.55-2.72-4.98 2.72 5.48-5.82 2.61 2.72 4.91-2.72L13 14.48Z" /></svg>;
 }
 
 function SocialIcon({ platform }: { platform: string }) {
@@ -41,21 +42,6 @@ function isValidChannelUrl(value: string, platform: string) {
   }
 }
 
-function getMessengerHref(artwork: ArtworkRecord) {
-  const configuredUrl = siteLinks.facebookPage.trim();
-  if (!configuredUrl) return null;
-  let page: string;
-  try {
-    const url = new URL(configuredUrl);
-    if (url.protocol !== "https:" || !["facebook.com", "www.facebook.com", "m.me", "www.m.me"].includes(url.hostname.toLowerCase())) return null;
-    page = url.pathname.split("/").filter(Boolean)[0] ?? "";
-  } catch {
-    return null;
-  }
-  if (!page) return "https://www.messenger.com/";
-  return `https://m.me/${encodeURIComponent(page)}?ref=${encodeURIComponent(`artwork_${artwork.slug}`)}`;
-}
-
 function Lightbox({ artworks, active, setActive, onClose }: { artworks: ArtworkRecord[]; active: number | null; setActive: (index: number) => void; onClose: () => void }) {
   const closeButton = useRef<HTMLButtonElement>(null);
   const work = active === null ? null : artworks[active];
@@ -70,7 +56,7 @@ function Lightbox({ artworks, active, setActive, onClose }: { artworks: ArtworkR
       if (event.key === "ArrowRight") setActive((active + 1) % artworks.length);
       if (event.key === "ArrowLeft") setActive((active - 1 + artworks.length) % artworks.length);
       if (event.key === "Tab") {
-        const controls = document.querySelectorAll<HTMLElement>(".paper-lightbox button");
+        const controls = document.querySelectorAll<HTMLElement>(".paper-lightbox button, .paper-lightbox a");
         if (!controls.length) return;
         const first = controls[0];
         const last = controls[controls.length - 1];
@@ -91,7 +77,7 @@ function Lightbox({ artworks, active, setActive, onClose }: { artworks: ArtworkR
       <section role="dialog" aria-modal="true" aria-label={`Xem toàn ảnh tác phẩm ${work.title}`}>
         <div className="paper-lightbox__top"><span>{String(active + 1).padStart(2, "0")} / {String(artworks.length).padStart(2, "0")}</span><strong>{work.title}</strong><button ref={closeButton} type="button" onClick={onClose} aria-label="Đóng ảnh xem trước">Đóng <span aria-hidden="true">×</span></button></div>
         <div className="paper-lightbox__image"><Image src={work.image} alt={`Toàn cảnh tác phẩm ${work.title}`} fill priority sizes="94vw" /></div>
-        <div className="paper-lightbox__controls"><button type="button" onClick={() => setActive((active - 1 + artworks.length) % artworks.length)} aria-label="Ảnh trước"><Arrow direction="left" /></button><span>{work.materials.join(" · ")}</span><button type="button" onClick={() => setActive((active + 1) % artworks.length)} aria-label="Ảnh tiếp theo"><Arrow /></button></div>
+        <div className="paper-lightbox__controls"><button type="button" onClick={() => setActive((active - 1 + artworks.length) % artworks.length)} aria-label="Ảnh trước"><Arrow direction="left" /></button><ArtworkPopupContact artwork={work} /><button type="button" onClick={() => setActive((active + 1) % artworks.length)} aria-label="Ảnh tiếp theo"><Arrow /></button></div>
       </section>
     </div>
   );
@@ -99,6 +85,7 @@ function Lightbox({ artworks, active, setActive, onClose }: { artworks: ArtworkR
 
 export default function ArtworkGallery({ artworks }: { artworks: ArtworkRecord[] }) {
   const [active, setActive] = useState(0);
+  const [visibleCount, setVisibleCount] = useState(10);
   const [lightbox, setLightbox] = useState<number | null>(null);
   const trigger = useRef<HTMLButtonElement | null>(null);
   const room = useRef<HTMLElement>(null);
@@ -115,10 +102,10 @@ export default function ArtworkGallery({ artworks }: { artworks: ArtworkRecord[]
 
   if (!work) return <main className="paper-gallery paper-gallery--empty"><h1>Chưa có tác phẩm</h1><p>Bộ sưu tập đang được cập nhật. Mời bạn ghé lại sau.</p></main>;
 
-  const artworkSocialLinks = [
-    { platform: "facebook", label: "Mở Facebook Page Huygirl Thư pháp Việt", url: siteLinks.facebookPage },
-    ...channelLinks.map(({ platform, url }) => ({ platform, label: `Mở kênh ${platform === "tiktok" ? "TikTok" : "YouTube"}`, url })),
-  ];
+  const artworkSocialLinks = work.socialLinks;
+  const otherGroups = [...new Map(artworks.map(({ group, groupSlug }) => [groupSlug, { group, groupSlug }])).values()]
+    .filter(({ groupSlug }) => groupSlug !== work.groupSlug)
+    .sort((a, b) => a.group.localeCompare(b.group, "vi"));
 
   function openLightbox(index: number, button: HTMLButtonElement) {
     trigger.current = button;
@@ -139,17 +126,17 @@ export default function ArtworkGallery({ artworks }: { artworks: ArtworkRecord[]
       <main className="paper-gallery">
         <GalleryAtmosphere />
         <header className="paper-header">
-          <a href={siteLinks.facebookPage} className="paper-brand" target="_blank" rel="noreferrer" aria-label="Mở Facebook Page Huygirl Thư pháp Việt"><span className="paper-brand__avatar"><img src={siteLinks.facebookAvatar} alt="" /></span><b>Huygirl<br />Thư pháp Việt</b></a>
-          <p>Thư viện tác phẩm · Nghệ thuật chữ Việt</p>
+          <a href={siteLinks.facebookPage} className="paper-brand" target="_blank" rel="noreferrer" aria-label="Mở Facebook Page Huygirl Thư pháp Việt"><span className="paper-brand__avatar"><img src={siteLinks.facebookAvatar} alt="" /></span><b><span className="paper-brand__name">Huygirl</span><span className="paper-brand__descriptor">Thư pháp Việt</span></b></a>
+          <p><strong>Thư viện tác phẩm</strong><span>Nghệ thuật chữ Việt</span></p>
           <nav className="paper-header__nav" aria-label="Liên kết chính">
-            <a className="paper-collection-link" href="#collection"><span className="paper-collection-link__full">Toàn bộ tác phẩm</span><span className="paper-collection-link__short">Tác phẩm</span><b aria-hidden="true">↓</b></a>
-            {channelLinks.length > 0 && <div className="paper-header__socials">{channelLinks.map(({ platform, url }) => <a key={platform} href={url} target="_blank" rel="noreferrer" aria-label={`Mở kênh ${platform === "tiktok" ? "TikTok" : "YouTube"}`} title={platform === "tiktok" ? "TikTok" : "YouTube"}><SocialIcon platform={platform} /></a>)}</div>}
+            <a className="paper-collection-link" href="#collection" aria-label="Xem toàn bộ tác phẩm" title="Toàn bộ tác phẩm"><span className="paper-collection-link__full">Toàn bộ tác phẩm</span><span className="paper-collection-link__short">Tác phẩm</span><b aria-hidden="true">↓</b></a>
+            <div className="paper-header__socials"><a href={siteLinks.facebookPage} target="_blank" rel="noreferrer" aria-label="Mở Facebook Page Huygirl Thư pháp Việt" title="Facebook"><SocialIcon platform="facebook" /></a>{channelLinks.map(({ platform, url }) => <a key={platform} href={url} target="_blank" rel="noreferrer" aria-label={`Mở kênh ${platform === "tiktok" ? "TikTok" : "YouTube"}`} title={platform === "tiktok" ? "TikTok" : "YouTube"}><SocialIcon platform={platform} /></a>)}</div>
           </nav>
         </header>
 
         <section ref={room} className="paper-room" aria-labelledby="active-artwork-title" tabIndex={-1}>
           <aside className="paper-index">
-            <div className="paper-index__heading"><span>Bộ sưu tập</span><b>{String(artworks.length).padStart(2, "0")} tác phẩm</b></div>
+            <div className="paper-index__heading"><span>Bộ sưu tập<span className="paper-index__mobile-label"> nghệ thuật chữ Việt</span></span><b>{String(artworks.length).padStart(2, "0")} tác phẩm</b></div>
             <div className="paper-index__list">
               {artworks.map((artwork, index) => (
                 <button key={artwork.slug} type="button" onClick={() => setActive(index)} className={active === index ? "is-active" : ""} aria-pressed={active === index}>
@@ -162,10 +149,16 @@ export default function ArtworkGallery({ artworks }: { artworks: ArtworkRecord[]
           </aside>
 
           <div className="paper-art-column">
-            {getMessengerHref(work) && <a className="paper-messenger paper-art-contact" href={getMessengerHref(work)!} target="_blank" rel="noreferrer" aria-label={`Liên hệ qua Messenger về tác phẩm ${work.title}`}>
-              <span><small>Liên hệ về tác phẩm</small><strong>Tôi muốn bức này</strong></span><MessengerIcon />
-            </a>}
+            <ArtworkContact artwork={work} className="paper-messenger paper-art-contact">
+              <span><small>Qua Messenger</small><strong>Liên hệ tác phẩm này</strong></span>
+              <span className="paper-art-contact__messenger"><MessengerIcon /></span>
+              <svg className="paper-art-contact__touch" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" strokeWidth="1.7" strokeLinecap="round" strokeLinejoin="round">
+                <path d="M8 13V6a2 2 0 0 1 4 0v6l1-1a2 2 0 0 1 2.7 0l.3.3a2 2 0 0 1 2.6.2l.4.4a2 2 0 0 1 2 2V17c0 3-2 5-5 5h-3c-1.7 0-3-1-4-2.5l-4-6a1.6 1.6 0 0 1 2.5-2L8 13Z" />
+                <path className="paper-art-contact__touch-rays" d="M3 6H1m3-4L2.5.5M16 3l1.5-1.5M18 7h3" />
+              </svg>
+            </ArtworkContact>
             <div className="paper-art-wrap">
+              <ArtworkSeal />
               <span className="paper-tape paper-tape--top" aria-hidden="true" />
               <button className="paper-art" type="button" onClick={(event) => openLightbox(active, event.currentTarget)} aria-label={`Mở ảnh toàn màn hình: ${work.title}`}>
                 <Image key={work.image} src={work.image} alt={`Tác phẩm thư pháp ${work.title}`} fill loading="eager" sizes="(max-width: 720px) 92vw, (max-width: 1100px) 60vw, 36vw" />
@@ -180,21 +173,27 @@ export default function ArtworkGallery({ artworks }: { artworks: ArtworkRecord[]
             <h1 id="active-artwork-title">{work.title}</h1>
             <div className="paper-materials" aria-label="Chất liệu">{work.materials.map((material) => <span key={material}>{material}</span>)}</div>
             <p className="paper-description">{work.description}</p>
-            {artworkSocialLinks.length > 0 && <nav className="paper-socials" aria-label="Mạng xã hội của Huygirl Thư pháp Việt"><p>Xem video viết chữ tại:</p>{artworkSocialLinks.map((link) => <a key={link.platform} href={link.url} target="_blank" rel="noreferrer" aria-label={link.label} title={link.platform}><SocialIcon platform={link.platform} /></a>)}</nav>}
+            <nav className="paper-related" aria-label="Khám phá các chữ thư pháp">
+              <p><span>Các chữ tương tự:</span> <Link href={`/chu/${work.groupSlug}?tac-pham=${work.slug}`} scroll={false}>{work.group}</Link></p>
+              {otherGroups.length > 0 && <p><span>Các chữ khác:</span> {otherGroups.map(({ group, groupSlug }, index) => <span key={groupSlug}><Link href={`/chu/${groupSlug}`} scroll={false}>{group}</Link>{index < otherGroups.length - 1 ? ", " : ""}</span>)}</p>}
+            </nav>
+            {artworkSocialLinks.length > 0 && <nav className="paper-socials" aria-label={`Video về tác phẩm ${work.title}`}><p>Xem video tác phẩm tại:</p>{artworkSocialLinks.map((link) => <a key={link.platform} href={link.url} target="_blank" rel="noreferrer" aria-label={link.label} title={link.platform}><SocialIcon platform={link.platform} /></a>)}</nav>}
             <div className="paper-controls"><button type="button" onClick={() => setActive((active - 1 + artworks.length) % artworks.length)} aria-label="Tác phẩm trước"><Arrow direction="left" /></button><span>{active + 1} / {artworks.length}</span><button type="button" onClick={() => setActive((active + 1) % artworks.length)} aria-label="Tác phẩm tiếp theo"><Arrow /></button></div>
           </article>
         </section>
 
         <section className="paper-collection" id="collection">
-          <div className="paper-collection__grid">
-            {artworks.map((artwork, index) => (
+          <div className="paper-collection__grid" id="artwork-grid">
+            {artworks.slice(0, visibleCount).map((artwork, index) => (
               <article key={artwork.slug}>
+                {index < 2 && <ArtworkSeal variant={index === 0 ? "peace" : "good-fortune"} />}
                 <button type="button" onClick={(event) => openLightbox(index, event.currentTarget)} aria-label={`Mở ảnh toàn màn hình: ${artwork.title}`}><Image src={artwork.image} alt={`Tác phẩm ${artwork.title}`} fill sizes="(max-width: 760px) 72vw, 24vw" /><span><ExpandIcon /></span></button>
-                <div className="paper-card-info"><small>{String(index + 1).padStart(2, "0")}</small><h3><button type="button" onClick={() => showArtwork(index)} aria-label={`Xem tác phẩm ${artwork.title} ở khung chính`}>{artwork.title}</button></h3><p>{artwork.materials.join(" · ")}</p></div>
-                {getMessengerHref(artwork) && <a className="paper-card-messenger" href={getMessengerHref(artwork)!} target="_blank" rel="noreferrer" aria-label={`Liên hệ qua Messenger về tác phẩm ${artwork.title}`}><MessengerIcon /> Tôi muốn bức này</a>}
+                <div className="paper-card-info"><h3><button type="button" onClick={() => showArtwork(index)} aria-label={`Xem tác phẩm ${artwork.title} ở khung chính`}>{artwork.title}</button></h3></div>
+                <ArtworkContact artwork={artwork} className="paper-card-messenger"><MessengerIcon /><span className="contact-label--full">Liên hệ tác phẩm này</span><span className="contact-label--mobile">LIÊN HỆ</span></ArtworkContact>
               </article>
             ))}
           </div>
+          {visibleCount < artworks.length && <button className="paper-load-more" type="button" aria-controls="artwork-grid" onClick={() => setVisibleCount((count) => count + 10)}>Xem thêm <span>({artworks.length - visibleCount} tác phẩm)</span></button>}
         </section>
       </main >
       <Lightbox artworks={artworks} active={lightbox} setActive={setLightbox} onClose={closeLightbox} />
