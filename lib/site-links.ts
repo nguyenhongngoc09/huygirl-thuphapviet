@@ -3,6 +3,6 @@
 export const siteLinks = {
   facebookPage: "https://www.facebook.com/Huygirltpv",
   facebookAvatar: "https://graph.facebook.com/Huygirltpv/picture?type=large",
-  tiktok: "",
+  tiktok: "https://www.tiktok.com/@huygirl.tpvn",
   youtube: "https://www.youtube.com/@huygirl",
 } as const;

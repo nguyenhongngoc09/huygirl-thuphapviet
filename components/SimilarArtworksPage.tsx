@@ -1,6 +1,7 @@
 import { getArtworks } from "@/lib/artworks";
 import { notFound } from "next/navigation";
 import { connection } from "next/server";
+import { recentArtworks } from "@/lib/recent-artworks";
 import SimilarGallery from "@/components/SimilarGallery";
 
 export type SimilarArtworksPageProps = {
@@ -15,5 +16,5 @@ export default async function SimilarArtworksPage({ params, searchParams, interc
   const artworks = (await getArtworks()).filter((artwork) => artwork.groupSlug === group);
   if (!artworks.length) notFound();
   const initialIndex = Math.max(0, artworks.findIndex((artwork) => artwork.slug === selected));
-  return <SimilarGallery artworks={artworks} initialIndex={initialIndex} intercepted={intercepted} />;
+  return <SimilarGallery recentIndices={recentArtworks(artworks, Date.now()).map(({ index }) => index)} artworks={artworks} initialIndex={initialIndex} intercepted={intercepted} />;
 }

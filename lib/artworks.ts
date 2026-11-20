@@ -10,6 +10,7 @@ export type ArtworkSocialLink = {
 };
 
 export type ArtworkRecord = {
+  addedAt?: string;
   slug: string;
   title: string;
   group: string;
@@ -21,6 +22,7 @@ export type ArtworkRecord = {
 };
 
 type DataArtwork = {
+  addedAt?: unknown;
   title?: unknown;
   image?: unknown;
   description?: unknown;
@@ -62,6 +64,8 @@ function parseArtwork(value: DataArtwork, index: number): ArtworkRecord {
   if (!value.materials || typeof value.materials !== "object" || Array.isArray(value.materials)) throw new Error(`${prefix}: "materials" phải là object.`);
   if (value.social_links != null && (typeof value.social_links !== "object" || Array.isArray(value.social_links))) throw new Error(`${prefix}: "social_links" phải là object.`);
 
+  if (value.addedAt !== undefined && (typeof value.addedAt !== "string" || !Number.isFinite(Date.parse(value.addedAt)))) throw new Error(`${prefix}: addedAt phải là ngày giờ hợp lệ.`);
+
   const materials = Object.entries(value.materials as Record<string, unknown>).map(([key, material]) => {
     if (typeof material !== "string") throw new Error(`${prefix}: materials.${key} phải là chuỗi.`);
     return `${titleFromKey(key)}: ${material}`;
@@ -74,6 +78,7 @@ function parseArtwork(value: DataArtwork, index: number): ArtworkRecord {
   });
 
   return {
+    addedAt: value.addedAt,
     slug: slugify(value.title, index),
     title: value.title,
     group: value.title.split(/\s+[–—-]\s+/)[0].trim(),

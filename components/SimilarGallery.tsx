@@ -1,12 +1,13 @@
 "use client";
 
 import type { ArtworkRecord } from "@/lib/artworks";
+import NewArtworkBadge from "@/components/NewArtworkBadge";
 import ArtworkPopupContact from "@/components/ArtworkPopupContact";
 import Image from "next/image";
 import { useRouter } from "next/navigation";
 import { useCallback, useEffect, useRef, useState } from "react";
 
-export default function SimilarGallery({ artworks, initialIndex, intercepted }: { artworks: ArtworkRecord[]; initialIndex: number; intercepted: boolean }) {
+export default function SimilarGallery({ artworks, initialIndex, intercepted, recentIndices }: { recentIndices: number[]; artworks: ArtworkRecord[]; initialIndex: number; intercepted: boolean }) {
   const router = useRouter();
   const [active, setActive] = useState(initialIndex);
   const dialog = useRef<HTMLDialogElement>(null);
@@ -70,7 +71,7 @@ export default function SimilarGallery({ artworks, initialIndex, intercepted }: 
           touchStart.current = null;
         }} onTouchCancel={() => { touchStart.current = null; }}>
           <button type="button" onClick={() => move(-1)} aria-label="Tác phẩm trước" disabled={artworks.length < 2}>‹</button>
-          <div className="similar-gallery__image"><Image key={work.slug} src={work.image} alt={work.title} fill priority sizes="(max-width: 720px) 80vw, 75vw" /></div>
+          <div className="similar-gallery__image">{recentIndices.includes(active) && <NewArtworkBadge />}<Image key={work.slug} src={work.image} alt={work.title} fill priority sizes="(max-width: 720px) 80vw, 75vw" /></div>
           <button type="button" onClick={() => move(1)} aria-label="Tác phẩm tiếp theo" disabled={artworks.length < 2}>›</button>
         </div>
         <footer className="similar-gallery__caption"><div aria-live="polite" aria-atomic="true"><h2>{work.title}</h2><p>{active + 1} / {artworks.length}</p></div><ArtworkPopupContact artwork={work} /></footer>

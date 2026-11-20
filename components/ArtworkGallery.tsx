@@ -1,6 +1,8 @@
 "use client";
 
 import type { ArtworkRecord } from "@/lib/artworks";
+import { recentArtworks } from "@/lib/recent-artworks";
+import NewArtworkBadge from "@/components/NewArtworkBadge";
 import ArtworkContact from "@/components/ArtworkContact";
 import ArtworkPopupContact from "@/components/ArtworkPopupContact";
 import ArtworkSeal from "@/components/ArtworkSeal";
@@ -42,7 +44,7 @@ function isValidChannelUrl(value: string, platform: string) {
   }
 }
 
-function Lightbox({ artworks, active, setActive, onClose }: { artworks: ArtworkRecord[]; active: number | null; setActive: (index: number) => void; onClose: () => void }) {
+function Lightbox({ artworks, recentIndices, active, setActive, onClose }: { artworks: ArtworkRecord[]; recentIndices: Set<number>; active: number | null; setActive: (index: number) => void; onClose: () => void }) {
   const closeButton = useRef<HTMLButtonElement>(null);
   const work = active === null ? null : artworks[active];
 
@@ -76,14 +78,14 @@ function Lightbox({ artworks, active, setActive, onClose }: { artworks: ArtworkR
     <div className="paper-lightbox" role="presentation" onMouseDown={(event) => { if (event.target === event.currentTarget) onClose(); }}>
       <section role="dialog" aria-modal="true" aria-label={`Xem toàn ảnh tác phẩm ${work.title}`}>
         <div className="paper-lightbox__top"><span>{String(active + 1).padStart(2, "0")} / {String(artworks.length).padStart(2, "0")}</span><strong>{work.title}</strong><button ref={closeButton} type="button" onClick={onClose} aria-label="Đóng ảnh xem trước">Đóng <span aria-hidden="true">×</span></button></div>
-        <div className="paper-lightbox__image"><Image src={work.image} alt={`Toàn cảnh tác phẩm ${work.title}`} fill priority sizes="94vw" /></div>
+        <div className="paper-lightbox__image">{recentIndices.has(active) && <NewArtworkBadge />}<Image src={work.image} alt={`Toàn cảnh tác phẩm ${work.title}`} fill priority sizes="94vw" /></div>
         <div className="paper-lightbox__controls"><button type="button" onClick={() => setActive((active - 1 + artworks.length) % artworks.length)} aria-label="Ảnh trước"><Arrow direction="left" /></button><ArtworkPopupContact artwork={work} /><button type="button" onClick={() => setActive((active + 1) % artworks.length)} aria-label="Ảnh tiếp theo"><Arrow /></button></div>
       </section>
     </div>
   );
 }
 
-export default function ArtworkGallery({ artworks }: { artworks: ArtworkRecord[] }) {
+export default function ArtworkGallery({ artworks, now }: { artworks: ArtworkRecord[]; now: number }) {
   const [active, setActive] = useState(0);
   const [visibleCount, setVisibleCount] = useState(10);
   const [lightbox, setLightbox] = useState<number | null>(null);
@@ -102,6 +104,9 @@ export default function ArtworkGallery({ artworks }: { artworks: ArtworkRecord[]
 
   if (!work) return <main className="paper-gallery paper-gallery--empty"><h1>Chưa có tác phẩm</h1><p>Bộ sưu tập đang được cập nhật. Mời bạn ghé lại sau.</p></main>;
 
+  const recent = recentArtworks(artworks, now);
+
+  const recentIndices = new Set(recent.map(({ index }) => index));
   const artworkSocialLinks = work.socialLinks;
   const otherGroups = [...new Map(artworks.map(({ group, groupSlug }) => [groupSlug, { group, groupSlug }])).values()]
     .filter(({ groupSlug }) => groupSlug !== work.groupSlug)
@@ -141,7 +146,7 @@ export default function ArtworkGallery({ artworks }: { artworks: ArtworkRecord[]
               {artworks.map((artwork, index) => (
                 <button key={artwork.slug} type="button" onClick={() => setActive(index)} className={active === index ? "is-active" : ""} aria-pressed={active === index}>
                   <span className="paper-index__number">{String(index + 1).padStart(2, "0")}</span>
-                  <span className="paper-index__thumb"><Image src={artwork.image} alt="" fill sizes="(max-width: 720px) 112px, 46px" /></span>
+                  <span className="paper-index__thumb">{recentIndices.has(index) && <NewArtworkBadge />}<Image src={artwork.image} alt="" fill sizes="(max-width: 720px) 112px, 46px" /></span>
                   <b>{artwork.title}</b>
                 </button>
               ))}
@@ -159,6 +164,7 @@ export default function ArtworkGallery({ artworks }: { artworks: ArtworkRecord[]
             </ArtworkContact>
             <div className="paper-art-wrap">
               <ArtworkSeal />
+              {recentIndices.has(active) && <NewArtworkBadge />}
               <span className="paper-tape paper-tape--top" aria-hidden="true" />
               <button className="paper-art" type="button" onClick={(event) => openLightbox(active, event.currentTarget)} aria-label={`Mở ảnh toàn màn hình: ${work.title}`}>
                 <Image key={work.image} src={work.image} alt={`Tác phẩm thư pháp ${work.title}`} fill loading="eager" sizes="(max-width: 720px) 92vw, (max-width: 1100px) 60vw, 36vw" />
@@ -182,10 +188,24 @@ export default function ArtworkGallery({ artworks }: { artworks: ArtworkRecord[]
           </article>
         </section>
 
+        {recent.length > 0 && <section className="paper-collection" aria-labelledby="recent-title">
+          <h2 id="recent-title" className="recent-title">Tác phẩm mới <span>7 ngày qua</span></h2>
+          <div className="recent-list">
+            {recent.map(({ artwork, index }) => (
+              <button key={artwork.slug} type="button" onClick={() => showArtwork(index)}>
+                <NewArtworkBadge />
+                <Image src={artwork.image} alt="" width={144} height={144} />
+                {artwork.title}
+              </button>
+            ))}
+          </div>
+        </section>}
         <section className="paper-collection" id="collection">
+          {recent.length > 0 && <h2 className="recent-title">Toàn bộ tác phẩm</h2>}
           <div className="paper-collection__grid" id="artwork-grid">
             {artworks.slice(0, visibleCount).map((artwork, index) => (
               <article key={artwork.slug}>
+                {recentIndices.has(index) && <NewArtworkBadge />}
                 {index < 2 && <ArtworkSeal variant={index === 0 ? "peace" : "good-fortune"} />}
                 <button type="button" onClick={(event) => openLightbox(index, event.currentTarget)} aria-label={`Mở ảnh toàn màn hình: ${artwork.title}`}><Image src={artwork.image} alt={`Tác phẩm ${artwork.title}`} fill sizes="(max-width: 760px) 72vw, 24vw" /><span><ExpandIcon /></span></button>
                 <div className="paper-card-info"><h3><button type="button" onClick={() => showArtwork(index)} aria-label={`Xem tác phẩm ${artwork.title} ở khung chính`}>{artwork.title}</button></h3></div>
@@ -196,7 +216,7 @@ export default function ArtworkGallery({ artworks }: { artworks: ArtworkRecord[]
           {visibleCount < artworks.length && <button className="paper-load-more" type="button" aria-controls="artwork-grid" onClick={() => setVisibleCount((count) => count + 10)}>Xem thêm <span>({artworks.length - visibleCount} tác phẩm)</span></button>}
         </section>
       </main >
-      <Lightbox artworks={artworks} active={lightbox} setActive={setLightbox} onClose={closeLightbox} />
+      <Lightbox recentIndices={recentIndices} artworks={artworks} active={lightbox} setActive={setLightbox} onClose={closeLightbox} />
     </>
   );
 }

@@ -5,5 +5,5 @@ import { connection } from "next/server";
 export default async function Home() {
   await connection();
   const artworks = await getArtworks();
-  return <ArtworkGallery artworks={artworks} />;
+  return <ArtworkGallery artworks={artworks} now={Date.now()} />;
 }

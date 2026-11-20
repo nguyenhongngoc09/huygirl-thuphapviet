@@ -56,6 +56,20 @@
         }
     },
     {
+        "title": "Thương – Tùng hạc, khung gỗ",
+        "image": "./thuong_05.JPEG",
+        "description": "Chữ Thương nổi bật trên nền sáng bằng nét đen mạnh mẽ, kết lại trong đường cong mềm mại. Cảnh tùng hạc bên vầng sáng và những dòng lời đề phía dưới đem đến chiều sâu tĩnh tại, còn viền vàng cùng khung gỗ sẫm giữ nét trang trọng. Tác phẩm gợi tình thương bền bỉ, sự chở che và lòng trân quý dành cho người thân.",
+        "materials": {
+            "chat_lieu": "Đang cập nhật",
+            "kich_thuoc": "Đang cập nhật"
+        },
+        "social_links": {
+            "facebook": "",
+            "youtube": "",
+            "tiktok": ""
+        }
+    },
+    {
         "title": "Yêu thương – Viền đỏ hoa văn",
         "image": "./yeuthuong_01.PNG",
         "description": "Hai chữ Yêu Thương nối nhau theo chiều dọc, để nét bút đen dẫn ánh nhìn qua những khoảng nền vàng nhạt đầy thoáng đãng. Đường cong cuối chữ nâng niu một trái tim nhỏ, trong khi viền đỏ phủ hoa văn uốn lượn tạo vẻ ấm áp và trang trọng. Những dòng chữ nhỏ ở chân tranh gợi tinh thần sẻ chia, nhắc rằng tình cảm lớn lên từ cách ta đối đãi với nhau mỗi ngày. Một điểm nhấn giàu ý nghĩa cho góc nhà sum họp, cũng là món quà thay lời trân quý.",
@@ -73,6 +87,20 @@
         "title": "An – Sen hồng",
         "image": "./an_01.PNG",
         "description": "Chữ An hiện lên cô đọng bằng nét đen mạnh mà mềm, phía dưới là những dòng thư pháp nhỏ và đóa sen hồng giữa tán lá xanh. Khoảng nền sáng giúp bố cục có độ thoáng, còn hai đầu cuộn màu vàng hoa văn đem lại sắc ấm trang nhã. Từ dáng sen vươn lên đến nhịp chữ khoan thai, bức tranh gợi một chốn bình yên bắt đầu trong lòng mỗi người. Đặt nơi phòng khách hay góc trà, tác phẩm như lời nhắc nhẹ để chậm lại và gìn giữ sự hòa thuận trong nhà.",
+        "materials": {
+            "chat_lieu": "Đang cập nhật",
+            "kich_thuoc": "Đang cập nhật"
+        },
+        "social_links": {
+            "facebook": "",
+            "youtube": "",
+            "tiktok": ""
+        }
+    },
+    {
+        "title": "An – Góc làm việc, viền xanh",
+        "image": "./an_02.JPEG",
+        "description": "Chữ An nhỏ gọn trên nền vàng, bao quanh bởi viền xanh trầm và khoảng nền sáng. Bức tranh cuộn được đặt trong không gian làm việc, giữa ánh sáng cửa sổ và cây xanh, gợi một nhịp sống điềm tĩnh. Tác phẩm như lời nhắc giữ lòng bình yên giữa những công việc mỗi ngày.",
         "materials": {
             "chat_lieu": "Đang cập nhật",
             "kich_thuoc": "Đang cập nhật"
@@ -126,6 +154,20 @@
         }
     },
     {
+        "title": "Buông – Góc trà, viền vàng",
+        "image": "./buong_04.JPEG",
+        "description": "Chữ Buông trải nét đen phóng khoáng trên ô nền vàng, được nâng đỡ bởi viền sáng và hai đầu cuộn vàng ấm. Trong góc trà có sách, hoa và ánh nắng, bức tranh gợi cảm giác thong dong, nhẹ lòng. Một lời nhắc giản dị để đặt xuống những điều nặng lòng và dành chỗ cho sự an nhiên.",
+        "materials": {
+            "chat_lieu": "Đang cập nhật",
+            "kich_thuoc": "Đang cập nhật"
+        },
+        "social_links": {
+            "facebook": "",
+            "youtube": "",
+            "tiktok": ""
+        }
+    },
+    {
         "title": "Đức – Hoa mẫu đơn",
         "image": "./duc_01.PNG",
         "description": "Chữ Đức được thể hiện bằng những nét đen dày, khỏe, xen những vệt bút thoáng tạo cảm giác vững vàng mà vẫn mềm mại. Cụm hoa mẫu đơn đỏ, trắng và hồng ở chân tranh làm dịu bố cục, hòa cùng hai đầu cuộn vàng có hoa văn. Tác phẩm gợi lời nhắc về nếp sống tử tế, lấy lòng nhân hậu làm nền cho những điều tốt đẹp lâu dài. Treo trong không gian gia đình, chữ Đức trở thành một lời dặn hiền hòa được gìn giữ qua từng thế hệ.",
@@ -137,6 +179,16 @@
             "facebook": "",
             "youtube": "",
             "tiktok": ""
+        }
+    },
+    {
+        "title": "Đức – Trăng sáng bên tán cây",
+        "image": "./duc_02.JPEG",
+        "addedAt": "2026-11-20T09:38:00+07:00",
+        "description": "Chữ Đức ở nửa trên khung tranh, nhường phần dưới cho tán cây, vầng trăng và những dòng chữ nhỏ.",
+        "materials": {
+            "chat_lieu": "Đang cập nhật",
+            "kich_thuoc": "Đang cập nhật"
         }
     },
     {
@@ -193,6 +245,286 @@
             "facebook": "",
             "youtube": "https://www.youtube.com/shorts/Dn1FEGFIRVE",
             "tiktok": ""
+        }
+    },
+    {
+        "title": "Thuận – Sen hồng, khung gỗ",
+        "image": "./thuan_03.JPEG",
+        "description": "Chữ Thuận trải rộng trên nền sáng trong khung gỗ sẫm màu, bao quanh bởi viền vàng hoa văn. Những đóa sen hồng ở góc tranh làm dịu nét bút đậm và khỏe, cùng lời đề phía dưới gợi tinh thần hòa hợp. Tác phẩm gửi gắm mong ước đồng lòng, biết lắng nghe và gìn giữ sự êm ấm trong gia đình.",
+        "materials": {
+            "chat_lieu": "Đang cập nhật",
+            "kich_thuoc": "Đang cập nhật"
+        },
+        "social_links": {
+            "facebook": "",
+            "youtube": "",
+            "tiktok": ""
+        }
+    },
+    {
+        "title": "Chân thành – Tranh cuộn viền vàng",
+        "image": "./chanthanh_01.JPEG",
+        "description": "Hai chữ Chân Thành nối nhau trên nền vàng, nét bút đậm xen những đường cong mềm mại. Khoảng viền trắng và hai đầu cuộn vàng giữ bố cục sáng, ấm và trang nhã. Đặt bên bàn đọc sách, tác phẩm gửi gắm lời nhắn về sự thật lòng, trân trọng và tử tế trong cách đối đãi với nhau.",
+        "materials": {
+            "chat_lieu": "Đang cập nhật",
+            "kich_thuoc": "Đang cập nhật"
+        },
+        "social_links": {
+            "facebook": "",
+            "youtube": "https://www.youtube.com/shorts/SGdfXejGJ54",
+            "tiktok": ""
+        }
+    },
+    {
+        "title": "Duyên – Cành hoa, viền vàng",
+        "image": "./duyen_01.JPEG",
+        "description": "Chữ Duyên mở rộng bằng nét cong uyển chuyển trên nền sáng, bên dưới là những dòng thư pháp nhỏ và cành hoa hồng thắm. Hai đầu cuộn vàng làm ấm bố cục, hòa cùng không gian dịu dàng bên cửa sổ. Bức tranh gợi sự nâng niu những cuộc gặp gỡ và những mối duyên đẹp trong đời.",
+        "materials": {
+            "chat_lieu": "Đang cập nhật",
+            "kich_thuoc": "Đang cập nhật"
+        },
+        "social_links": {
+            "facebook": "",
+            "youtube": "",
+            "tiktok": ""
+        }
+    },
+    {
+        "title": "Thuận an – Tranh dọc trong phòng khách",
+        "image": "./thuanan_01.JPEG",
+        "description": "Tranh chữ Thuận An dáng dọc được đặt trong khung sẫm màu, với cụm hoa nhiều sắc ở phần chân tranh. Giữa không gian phòng khách ấm áp, bố cục thanh thoát tạo một điểm nhấn gần gũi. Hai chữ gửi gắm lời chúc thuận hòa và bình an cho mái ấm, nơi mọi người cùng trở về và sẻ chia.",
+        "materials": {
+            "chat_lieu": "Đang cập nhật",
+            "kich_thuoc": "Đang cập nhật"
+        },
+        "social_links": {
+            "facebook": "",
+            "youtube": "",
+            "tiktok": ""
+        }
+    },
+    {
+        "title": "Thuận an – Đôi tranh khung gỗ",
+        "image": "./thuanan_02.JPEG",
+        "description": "Hai chữ Thuận và An được viết trên hai bức tranh nền vàng, đặt cạnh nhau trong khung gỗ sẫm màu. Nét mực đen cô đọng cùng những lời đề nhỏ tạo vẻ mộc mạc, cân đối và trầm ấm. Đôi tranh kết thành lời chúc về sự đồng lòng và bình yên, phù hợp với một góc nhỏ trong không gian sống.",
+        "materials": {
+            "chat_lieu": "Đang cập nhật",
+            "kich_thuoc": "Đang cập nhật"
+        },
+        "social_links": {
+            "facebook": "",
+            "youtube": "",
+            "tiktok": ""
+        }
+    },
+    {
+        "title": "An – Chú tiểu, viền vàng",
+        "image": "./an_03.JPEG",
+        "addedAt": "2026-11-20T09:38:00+07:00",
+        "description": "Chữ An nằm giữa viền vàng, bên dưới là hình chú tiểu ngồi yên.",
+        "materials": {
+            "chat_lieu": "Đang cập nhật",
+            "kich_thuoc": "Đang cập nhật"
+        }
+    },
+    {
+        "title": "An – Trăng bên tán cây",
+        "image": "./an_04.JPEG",
+        "addedAt": "2026-11-20T09:38:00+07:00",
+        "description": "Nét chữ An uốn cong trên nền sáng. Tán cây và vầng trăng thu nhỏ vào góc dưới khung tranh.",
+        "materials": {
+            "chat_lieu": "Đang cập nhật",
+            "kich_thuoc": "Đang cập nhật"
+        }
+    },
+    {
+        "title": "An – Dưới lá sen, khung gỗ sáng",
+        "image": "./an_05.JPEG",
+        "addedAt": "2026-11-20T09:38:00+07:00",
+        "description": "Một chiếc lá sen che nghiêng trên đầu chú tiểu. Khung gỗ sáng ôm lấy nét chữ An.",
+        "materials": {
+            "chat_lieu": "Đang cập nhật",
+            "kich_thuoc": "Đang cập nhật"
+        }
+    },
+    {
+        "title": "An – Nền vàng dưới bóng cây",
+        "image": "./an_06.JPEG",
+        "addedAt": "2026-11-20T09:38:00+07:00",
+        "description": "Chữ An viết bằng mực đen trên nền vàng, đặt dưới bóng cây ngoài sân.",
+        "materials": {
+            "chat_lieu": "Đang cập nhật",
+            "kich_thuoc": "Đang cập nhật"
+        }
+    },
+    {
+        "title": "Bình an – Bên bàn phím",
+        "image": "./binhan_01.JPEG",
+        "addedAt": "2026-11-20T09:38:00+07:00",
+        "description": "Hai chữ Bình an nối nhau bằng một nét cong dài. Khung tranh nhỏ đặt ngay ngắn phía trên bàn phím.",
+        "materials": {
+            "chat_lieu": "Đang cập nhật",
+            "kich_thuoc": "Đang cập nhật"
+        }
+    },
+    {
+        "title": "Bình an – Tranh cuộn trên hiên",
+        "image": "./binhan_02.JPEG",
+        "addedAt": "2026-11-20T09:38:00+07:00",
+        "description": "Hai chữ Bình an trải dọc mặt cuộn, bên dưới là những dòng chữ nhỏ và nét vẽ phong cảnh.",
+        "materials": {
+            "chat_lieu": "Đang cập nhật",
+            "kich_thuoc": "Đang cập nhật"
+        }
+    },
+    {
+        "title": "Bình an – Trăng sáng, viền vàng",
+        "image": "./binhan_03.JPEG",
+        "addedAt": "2026-11-20T09:38:00+07:00",
+        "description": "Khung viền vàng bao quanh hai chữ Bình an. Một vầng trăng nhỏ hiện lên giữa cảnh sắc dưới chân chữ.",
+        "materials": {
+            "chat_lieu": "Đang cập nhật",
+            "kich_thuoc": "Đang cập nhật"
+        }
+    },
+    {
+        "title": "Buông – Bên chậu cây xanh",
+        "image": "./buong_05.JPEG",
+        "addedAt": "2026-11-20T09:38:00+07:00",
+        "description": "Nét chữ Buông trải ngang trên nền giấy sáng, bên cạnh là chậu cây và những chú tiểu nhỏ.",
+        "materials": {
+            "chat_lieu": "Đang cập nhật",
+            "kich_thuoc": "Đang cập nhật"
+        }
+    },
+    {
+        "title": "Buông – Nét dài trên nền vàng",
+        "image": "./buong_06.JPEG",
+        "addedAt": "2026-11-20T09:38:00+07:00",
+        "description": "Từ chữ Buông, nét mực mảnh đổ dài xuống khoảng trống trên nền giấy vàng.",
+        "materials": {
+            "chat_lieu": "Đang cập nhật",
+            "kich_thuoc": "Đang cập nhật"
+        }
+    },
+    {
+        "title": "Buông – Bốn chú tiểu bên khung tranh",
+        "image": "./buong_07.JPEG",
+        "addedAt": "2026-11-20T09:38:00+07:00",
+        "description": "Khung dọc giữ khoảng thoáng quanh chữ Buông. Bốn chú tiểu ngồi thành hàng dưới chân tranh.",
+        "materials": {
+            "chat_lieu": "Đang cập nhật",
+            "kich_thuoc": "Đang cập nhật"
+        }
+    },
+    {
+        "title": "Lặng – Bên trang sách",
+        "image": "./lang_01.JPEG",
+        "addedAt": "2026-11-20T09:38:00+07:00",
+        "description": "Chữ Lặng có nét cuối rủ xuống bên những dòng thơ. Khung tranh đặt cạnh trang sách mở.",
+        "materials": {
+            "chat_lieu": "Đang cập nhật",
+            "kich_thuoc": "Đang cập nhật"
+        }
+    },
+    {
+        "title": "Nhẫn – Tán cây xanh, khung dọc",
+        "image": "./nhan_02.JPEG",
+        "addedAt": "2026-11-20T09:38:00+07:00",
+        "description": "Chữ Nhẫn nằm phía trên tán cây xanh và vầng trăng vàng trong khung gỗ dọc.",
+        "materials": {
+            "chat_lieu": "Đang cập nhật",
+            "kich_thuoc": "Đang cập nhật"
+        }
+    },
+    {
+        "title": "Nhẫn – Chú tiểu, khung ngang",
+        "image": "./nhan_03.JPEG",
+        "addedAt": "2026-11-20T09:38:00+07:00",
+        "description": "Khung ngang đặt chú tiểu và cành hoa bên trái, cân với chữ Nhẫn đậm nét bên phải.",
+        "materials": {
+            "chat_lieu": "Đang cập nhật",
+            "kich_thuoc": "Đang cập nhật"
+        }
+    },
+    {
+        "title": "Nhẫn – Chú tiểu, khung dọc",
+        "image": "./nhan_04.JPEG",
+        "addedAt": "2026-11-20T09:38:00+07:00",
+        "description": "Chữ Nhẫn chiếm phần trên của tranh dọc. Hình chú tiểu và những cánh hoa điểm màu cho nền sáng.",
+        "materials": {
+            "chat_lieu": "Đang cập nhật",
+            "kich_thuoc": "Đang cập nhật"
+        }
+    },
+    {
+        "title": "Nhẹ – Bên hai chú tiểu",
+        "image": "./nhe_01.JPEG",
+        "addedAt": "2026-11-20T09:38:00+07:00",
+        "description": "Nét mực thanh mảnh tạo thành chữ Nhẹ, bên dưới là hai chú tiểu nhỏ cạnh khung tranh.",
+        "materials": {
+            "chat_lieu": "Đang cập nhật",
+            "kich_thuoc": "Đang cập nhật"
+        }
+    },
+    {
+        "title": "Sống – Hoa hồng bên nét chữ",
+        "image": "./song_01.JPEG",
+        "addedAt": "2026-11-20T09:38:00+07:00",
+        "description": "Chữ Sống nghiêng theo nét bút phóng khoáng. Nhành hoa hồng chạy dọc mép trái của tranh.",
+        "materials": {
+            "chat_lieu": "Đang cập nhật",
+            "kich_thuoc": "Đang cập nhật"
+        }
+    },
+    {
+        "title": "Tâm – Trăng bên tán cây",
+        "image": "./tam_01.JPEG",
+        "addedAt": "2026-11-20T09:38:00+07:00",
+        "description": "Chữ Tâm nằm trên khoảng giấy sáng, phía dưới là tán cây xanh cạnh vầng trăng vàng.",
+        "materials": {
+            "chat_lieu": "Đang cập nhật",
+            "kich_thuoc": "Đang cập nhật"
+        }
+    },
+    {
+        "title": "Thuận – Khung ngang trên kệ gỗ",
+        "image": "./thuan_04.JPEG",
+        "addedAt": "2026-11-20T09:38:00+07:00",
+        "description": "Chữ Thuận trải ngang giữa viền vàng. Khung gỗ sẫm đặt trên mặt kệ.",
+        "materials": {
+            "chat_lieu": "Đang cập nhật",
+            "kich_thuoc": "Đang cập nhật"
+        }
+    },
+    {
+        "title": "Thuận – Trên giá vẽ ngoài sân",
+        "image": "./thuan_05.JPEG",
+        "addedAt": "2026-11-20T09:38:00+07:00",
+        "description": "Bức chữ Thuận có viền vàng, đặt trên giá vẽ gỗ giữa khoảng sân.",
+        "materials": {
+            "chat_lieu": "Đang cập nhật",
+            "kich_thuoc": "Đang cập nhật"
+        }
+    },
+    {
+        "title": "Thương – Vầng trăng bên sông",
+        "image": "./thuong_06.JPEG",
+        "addedAt": "2026-11-20T09:38:00+07:00",
+        "description": "Nét chữ Thương cuộn dài phía trên vầng trăng và phong cảnh ven sông.",
+        "materials": {
+            "chat_lieu": "Đang cập nhật",
+            "kich_thuoc": "Đang cập nhật"
+        }
+    },
+    {
+        "title": "Thương – Chú tiểu, khung gỗ",
+        "image": "./thuong_07.JPEG",
+        "addedAt": "2026-11-20T09:38:00+07:00",
+        "description": "Khung gỗ có viền vàng ôm lấy chữ Thương. Hình chú tiểu và hàng chữ nhỏ nằm phía dưới.",
+        "materials": {
+            "chat_lieu": "Đang cập nhật",
+            "kich_thuoc": "Đang cập nhật"
         }
     }
 ]
